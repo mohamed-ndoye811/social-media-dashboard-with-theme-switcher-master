@@ -1,0 +1,264 @@
+/*===== VARIABLES AND IMPORTS ===== */
+
+/* Colors: */
+
+body[data-theme="dark"] {
+  --primary-color-100: hsl(230, 17%, 14%);
+  --primary-color-200: hsl(232, 19%, 15%);
+  --primary-color-300: hsl(228, 28%, 20%);
+  --text-color-1: hsl(228, 34%, 66%);
+  --text-color-2: hsl(0, 0%, 100%);
+  --theme-button-gradient: linear-gradient(
+    45deg,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+}
+
+body[data-theme="light"] {
+  --primary-color-100: hsl(0, 0%, 100%);
+  --primary-color-200: hsl(225, 100%, 98%);
+  --primary-color-300: hsl(227, 47%, 96%);
+  --text-color-1: hsl(228, 12%, 44%);
+  --text-color-2: hsl(230, 17%, 14%);
+  --theme-button-gradient: hsl(230, 22%, 74%);
+}
+
+$primary-color-100: var(--primary-color-100);
+$primary-color-200: var(--primary-color-200);
+$primary-color-300: var(--primary-color-300);
+$text-color-1: var(--text-color-1);
+$text-color-2: var(--text-color-2);
+$theme-button-gradient: var(--theme-button-gradient);
+
+/* Growth colors: */
+$raise-green: hsl(163, 72%, 41%);
+$drop-red: hsl(356, 69%, 56%);
+
+/* Cards borders color: */
+
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youtube: hsl(348, 97%, 39%);
+
+/* Fonts import: */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+$font-inter: "Inter", sans-serif;
+
+/* ========== */
+
+/*===== INITIALIZATION & GENERAL STYLES===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Counter cards top border color: */
+.topBorder {
+  &.facebook {
+    background-color: $facebook;
+  }
+
+  &.twitter {
+    background-color: $twitter;
+  }
+
+  &.youtube {
+    background-color: $youtube;
+  }
+
+  &.instagram {
+    background: $instagram;
+  }
+}
+
+/* ========== */
+
+/* ===== STYLES ===== */
+
+body {
+  background-color: $primary-color-100;
+  padding: 40px 25px;
+  font-size: 15px;
+  font-family: $font-inter;
+  color: $text-color-2;
+  font-weight: 400;
+
+  .backgroundTopDecoration {
+    height: 15.667em;
+    width: 100vw;
+    position: absolute;
+    background-color: $primary-color-200;
+    z-index: -2;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    left: 0;
+    top: 0;
+  }
+
+  header {
+    h1 {
+      font-size: 1.333em;
+    }
+
+    .totalCounter {
+      font-size: 0.667em;
+      color: $text-color-1;
+    }
+
+    .separator {
+      width: 100%;
+      height: 1px;
+      background-color: $primary-color-300;
+      margin: 20px 0 15px;
+    }
+
+    .themeSwitch {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      .modeActivated {
+        font-size: 0.667em;
+        color: $text-color-1;
+      }
+
+      #themeButton {
+        width: 50px;
+        height: 25px;
+        background: $theme-button-gradient;
+        border-radius: 100px;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        #switch {
+          display: block;
+          height: 20px;
+          width: 20px;
+          background-color: $primary-color-200;
+          position: absolute;
+          left: 3px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  main {
+    margin-top: 2.667em;
+
+    #countersSection {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      gap: 1.667em;
+      width: 100%;
+
+      .counter {
+        background-color: $primary-color-300;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        padding: 25px 0 25px;
+        height: 26.875vh;
+
+        .topBorder {
+          height: 3px;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        .socials {
+          display: flex;
+          width: fit-content;
+          height: fit-content;
+          align-items: center;
+          gap: 6px;
+          margin: 0 auto;
+          font-size: 0.667em;
+          color: $text-color-1;
+
+          img {
+            width: 1em;
+          }
+        }
+
+        .count {
+          display: flex;
+          flex-direction: column;
+          height: fit-content;
+
+          .number {
+            font-size: 2.667em;
+            font-weight: 700;
+          }
+
+          p {
+            text-transform: uppercase;
+            color: $text-color-1;
+            font-size: 0.667em;
+            letter-spacing: 0.333em;
+          }
+        }
+
+        .growth {
+          display: flex;
+          align-items: center;
+          width: fit-content;
+          margin: 0 auto;
+          font-size: 0.667em;
+          gap: 2px;
+
+          .amount {
+            height: fit-content;
+          }
+
+          p {
+            text-transform: capitalize;
+          }
+
+          &[raise] {
+            color: $raise-green;
+
+            &::before {
+              content: "";
+              background-image: url("../images/icon-up.svg");
+              width: 10px;
+              height: 5px;
+              background-repeat: no-repeat;
+              background-position: center;
+              align-self: center;
+            }
+          }
+
+          &[drop] {
+            color: $drop-red;
+
+            &::before {
+              content: "";
+              background-image: url("../images/icon-down.svg");
+              width: 10px;
+              height: 5px;
+              background-repeat: no-repeat;
+              background-position: center;
+              align-self: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

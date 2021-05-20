@@ -1,0 +1,284 @@
+/*===== VARIABLES AND IMPORTS ===== */
+/* Colors: */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+body[data-theme="dark"] {
+  --primary-color-100: hsl(230, 17%, 14%);
+  --primary-color-200: hsl(232, 19%, 15%);
+  --primary-color-300: hsl(228, 28%, 20%);
+  --text-color-1: hsl(228, 34%, 66%);
+  --text-color-2: hsl(0, 0%, 100%);
+  --theme-button-gradient: linear-gradient(
+    45deg,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+}
+
+body[data-theme="light"] {
+  --primary-color-100: hsl(0, 0%, 100%);
+  --primary-color-200: hsl(225, 100%, 98%);
+  --primary-color-300: hsl(227, 47%, 96%);
+  --text-color-1: hsl(228, 12%, 44%);
+  --text-color-2: hsl(230, 17%, 14%);
+  --theme-button-gradient: hsl(230, 22%, 74%);
+}
+
+/* Growth colors: */
+/* Cards borders color: */
+/* Fonts import: */
+/* ========== */
+/*===== INITIALIZATION & GENERAL STYLES===== */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Counter cards top border color: */
+.topBorder.facebook {
+  background-color: #198ff5;
+}
+
+.topBorder.twitter {
+  background-color: #1ca0f2;
+}
+
+.topBorder.youtube {
+  background-color: #c4032a;
+}
+
+.topBorder.instagram {
+  background: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
+  background: linear-gradient(90deg, #fdc468, #df4996);
+}
+
+/* ========== */
+/* ===== STYLES ===== */
+body {
+  background-color: var(--primary-color-100);
+  padding: 40px 25px;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color-2);
+  font-weight: 400;
+}
+
+body .backgroundTopDecoration {
+  height: 15.667em;
+  width: 100vw;
+  position: absolute;
+  background-color: var(--primary-color-200);
+  z-index: -2;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  left: 0;
+  top: 0;
+}
+
+body header h1 {
+  font-size: 1.333em;
+}
+
+body header .totalCounter {
+  font-size: 0.667em;
+  color: var(--text-color-1);
+}
+
+body header .separator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary-color-300);
+  margin: 20px 0 15px;
+}
+
+body header .themeSwitch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .themeSwitch .modeActivated {
+  font-size: 0.667em;
+  color: var(--text-color-1);
+}
+
+body header .themeSwitch #themeButton {
+  width: 50px;
+  height: 25px;
+  background: var(--theme-button-gradient);
+  border-radius: 100px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .themeSwitch #themeButton #switch {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-color: var(--primary-color-200);
+  position: absolute;
+  left: 3px;
+  border-radius: 50%;
+}
+
+body main {
+  margin-top: 2.667em;
+}
+
+body main #countersSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  gap: 1.667em;
+  width: 100%;
+}
+
+body main #countersSection .counter {
+  background-color: var(--primary-color-300);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  padding: 25px 0 25px;
+  height: 26.875vh;
+}
+
+body main #countersSection .counter .topBorder {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body main #countersSection .counter .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+  margin: 0 auto;
+  font-size: 0.667em;
+  color: var(--text-color-1);
+}
+
+body main #countersSection .counter .socials img {
+  width: 1em;
+}
+
+body main #countersSection .counter .count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+body main #countersSection .counter .count .number {
+  font-size: 2.667em;
+  font-weight: 700;
+}
+
+body main #countersSection .counter .count p {
+  text-transform: uppercase;
+  color: var(--text-color-1);
+  font-size: 0.667em;
+  letter-spacing: 0.333em;
+}
+
+body main #countersSection .counter .growth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 0.667em;
+  gap: 2px;
+}
+
+body main #countersSection .counter .growth .amount {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+body main #countersSection .counter .growth p {
+  text-transform: capitalize;
+}
+
+body main #countersSection .counter .growth[raise] {
+  color: #1db489;
+}
+
+body main #countersSection .counter .growth[raise]::before {
+  content: "";
+  background-image: url("../images/icon-up.svg");
+  width: 10px;
+  height: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body main #countersSection .counter .growth[drop] {
+  color: #dc414c;
+}
+
+body main #countersSection .counter .growth[drop]::before {
+  content: "";
+  background-image: url("../images/icon-down.svg");
+  width: 10px;
+  height: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,87 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body data-theme="dark">
+    <!-- BACKGROUND DECORATION -->
+    <div class="backgroundTopDecoration"></div>
 
-  Dark Mode
+    <header>
+      <h1>Social Media Dashboard</h1>
+      <p class="totalCounter">Total Followers: 23,004</p>
+      <div class="separator"></div>
+      <div class="themeSwitch">
+        <p class="modeActivated">Dark Mode</p>
+        <div id="themeButton">
+          <span id="switch"></span>
+        </div>
+      </div>
+    </header>
 
-  
+    <main>
+      <section id="countersSection">
+        <!------- FACEBOOK COUNTER ------->
+        <div class="counter">
+          <div class="topBorder facebook"></div>
+          <div class="socials">
+            <img src="./images/icon-facebook.svg" alt="" class="icon" />
+            <p class="account">@nathanf</p>
+          </div>
+          <div class="count">
+            <div class="number">1987</div>
+            <p>Followers</p>
+          </div>
+          <div class="growth" raise>
+            <p class="amount">12</p>
+            <p>today</p>
+          </div>
+        </div>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+        <!------- TWITTER COUNTER ------->
+        <div class="counter">
+          <div class="topBorder twitter"></div>
+          <div class="socials">
+            <img src="./images/icon-twitter.svg" alt="" class="icon" />
+            <p class="account">@nathanf</p>
+          </div>
+          <div class="count">
+            <div class="number">1044</div>
+            <p>Followers</p>
+          </div>
+          <div class="growth" raise>
+            <img src="" alt="" class="icon" />
+            <p class="amount">99</p>
+            <p>today</p>
+          </div>
+        </div>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+        <!------- INSTAGRAM COUNTER ------->
+        <div class="counter">
+          <div class="topBorder instagram"></div>
+          <div class="socials">
+            <img src="./images/icon-instagram.svg" alt="" class="icon" />
+            <p class="account">@realnathanf</p>
+          </div>
+          <div class="count">
+            <div class="number">11k</div>
+            <p>Followers</p>
+          </div>
+          <div class="growth" raise>
+            <img src="" alt="" class="icon" />
+            <p class="amount">1099</p>
+            <p>today</p>
+          </div>
+        </div>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+        <!------- YOUTUBE COUNTER ------->
+        <div class="counter">
+          <div class="topBorder youtube"></div>
+          <div class="socials">
+            <img src="./images/icon-youtube.svg" alt="" class="icon" />
+            <p class="account">Nathan F.</p>
+          </div>
+          <div class="count">
+            <div class="number">8239</div>
+            <p>Subscribers</p>
+          </div>
+          <div class="growth" drop>
+            <img src="" alt="" class="icon" />
+            <p class="amount">144</p>
+            <p>today</p>
+          </div>
+        </div>
+      </section>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+      <section id="overviewSection">
+        <h2>Overview - Today</h2>
 
+        <!------- FACEBOOK CARDS ------->
+        <div class="card">
+          <div class="topPart">
+            <h3 class="title">Page Views</h3>
+            <img src="" alt="" class="socialIcon" />
+          </div>
+          <div class="bottomPart">
+            <p class="number">87</p>
+            <div class="growth">
+              <img src="" alt="" class="icon" />
+              <p class="percentage">3%</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="card">
+          <div class="topPart">
+            <h3 class="title">Likes</h3>
+            <img src="" alt="" class="socialIcon" />
+          </div>
+          <div class="bottomPart">
+            <p class="number">52</p>
+            <div class="growth">
+              <img src="" alt="" class="icon" />
+              <p class="percentage">2%</p>
+            </div>
+          </div>
+        </div>
 
-  Overview - Today
+        <!------- INSTAGRAM CARDS ------->
+        <div class="card">
+          <div class="topPart">
+            <h3 class="title">Likes</h3>
+            <img src="" alt="" class="socialIcon" />
+          </div>
+          <div class="bottomPart">
+            <p class="number">5462</p>
+            <div class="growth">
+              <img src="" alt="" class="icon" />
+              <p class="percentage">2257%</p>
+            </div>
+          </div>
+        </div>
 
-  Page Views
-  87
-  3%
+        <div class="card">
+          <div class="topPart">
+            <h3 class="title">Profile Views</h3>
+            <img src="" alt="" class="socialIcon" />
+          </div>
+          <div class="bottomPart">
+            <p class="number">52k</p>
+            <div class="growth">
+              <img src="" alt="" class="icon" />
+              <p class="percentage">1375%</p>
+            </div>
+          </div>
+        </div>
 
-  Likes
-  52
-  2%
+        <!------- TWITTER CARDS ------->
+        <div class="card">
+          <div class="topPart">
+            <h3 class="title">Retweets</h3>
+            <img src="" alt="" class="socialIcon" />
+          </div>
+          <div class="bottomPart">
+            <p class="number">117</p>
+            <div class="growth">
+              <img src="" alt="" class="icon" />
+              <p class="percentage">303%</p>
+            </div>
+          </div>
+        </div>
 
-  Likes
-  5462
-  2257%
+        <div class="card">
+          <div class="topPart">
+            <h3 class="title">Likes</h3>
+            <img src="" alt="" class="socialIcon" />
+          </div>
+          <div class="bottomPart">
+            <p class="number">507</p>
+            <div class="growth">
+              <img src="" alt="" class="icon" />
+              <p class="percentage">553%</p>
+            </div>
+          </div>
+        </div>
 
-  Profile Views
-  52k
-  1375%
+        <!------- YOUTUBE CARDS ------->
+        <div class="card">
+          <div class="topPart">
+            <h3 class="title">Likes</h3>
+            <img src="" alt="" class="socialIcon" />
+          </div>
+          <div class="bottomPart">
+            <p class="number">107</p>
+            <div class="growth">
+              <img src="" alt="" class="icon" />
+              <p class="percentage">19%</p>
+            </div>
+          </div>
+        </div>
 
-  Retweets
-  117
-  303%
+        <div class="card">
+          <div class="topPart">
+            <h3 class="title">Total Views</h3>
+            <img src="" alt="" class="socialIcon" />
+          </div>
+          <div class="bottomPart">
+            <p class="number">1407</p>
+            <div class="growth">
+              <img src="" alt="" class="icon" />
+              <p class="percentage">12%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/mohamed-ndoye811"
+        >Mohamed Ndoye</a
+      >.
+    </footer>
+  </body>
 </html>
