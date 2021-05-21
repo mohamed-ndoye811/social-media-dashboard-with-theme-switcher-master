@@ -15,14 +15,17 @@
     <title>Frontend Mentor | [Challenge Name Here]</title>
 
     <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./js/themeSwitch.js" defer></script>
   </head>
-  <body data-theme="dark">
+  <body class="dark">
     <!-- BACKGROUND DECORATION -->
     <div class="backgroundTopDecoration"></div>
 
     <header>
-      <h1>Social Media Dashboard</h1>
-      <p class="totalCounter">Total Followers: 23,004</p>
+      <div class="text">
+        <h1>Social Media Dashboard</h1>
+        <p class="totalCounter">Total Followers: 23,004</p>
+      </div>
       <div class="separator"></div>
       <div class="themeSwitch">
         <p class="modeActivated">Dark Mode</p>
@@ -63,7 +66,6 @@
             <p>Followers</p>
           </div>
           <div class="growth" raise>
-            <img src="" alt="" class="icon" />
             <p class="amount">99</p>
             <p>today</p>
           </div>
@@ -81,7 +83,6 @@
             <p>Followers</p>
           </div>
           <div class="growth" raise>
-            <img src="" alt="" class="icon" />
             <p class="amount">1099</p>
             <p>today</p>
           </div>
@@ -99,7 +100,6 @@
             <p>Subscribers</p>
           </div>
           <div class="growth" drop>
-            <img src="" alt="" class="icon" />
             <p class="amount">144</p>
             <p>today</p>
           </div>
@@ -109,118 +109,120 @@
       <section id="overviewSection">
         <h2>Overview - Today</h2>
 
-        <!------- FACEBOOK CARDS ------->
-        <div class="card">
-          <div class="topPart">
-            <h3 class="title">Page Views</h3>
-            <img src="" alt="" class="socialIcon" />
-          </div>
-          <div class="bottomPart">
-            <p class="number">87</p>
-            <div class="growth">
-              <img src="" alt="" class="icon" />
-              <p class="percentage">3%</p>
+        <div class="cards">
+          <!------- FACEBOOK CARDS ------->
+          <div class="card">
+            <div class="topPart">
+              <h3 class="title">Page Views</h3>
+              <img src="./images/icon-facebook.svg" alt="" class="socialIcon" />
+            </div>
+            <div class="bottomPart">
+              <p class="number">87</p>
+              <div class="growth" raise>
+                <p class="percentage">3%</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card">
-          <div class="topPart">
-            <h3 class="title">Likes</h3>
-            <img src="" alt="" class="socialIcon" />
-          </div>
-          <div class="bottomPart">
-            <p class="number">52</p>
-            <div class="growth">
-              <img src="" alt="" class="icon" />
-              <p class="percentage">2%</p>
+          <div class="card">
+            <div class="topPart">
+              <h3 class="title">Likes</h3>
+              <img src="./images/icon-facebook.svg" alt="" class="socialIcon" />
+            </div>
+            <div class="bottomPart">
+              <p class="number">52</p>
+              <div class="growth" drop>
+                <p class="percentage">2%</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!------- INSTAGRAM CARDS ------->
-        <div class="card">
-          <div class="topPart">
-            <h3 class="title">Likes</h3>
-            <img src="" alt="" class="socialIcon" />
-          </div>
-          <div class="bottomPart">
-            <p class="number">5462</p>
-            <div class="growth">
-              <img src="" alt="" class="icon" />
-              <p class="percentage">2257%</p>
+          <!------- INSTAGRAM CARDS ------->
+          <div class="card">
+            <div class="topPart">
+              <h3 class="title">Likes</h3>
+              <img
+                src="./images/icon-instagram.svg"
+                alt=""
+                class="socialIcon"
+              />
+            </div>
+            <div class="bottomPart">
+              <p class="number">5462</p>
+              <div class="growth" raise>
+                <p class="percentage">2257%</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card">
-          <div class="topPart">
-            <h3 class="title">Profile Views</h3>
-            <img src="" alt="" class="socialIcon" />
-          </div>
-          <div class="bottomPart">
-            <p class="number">52k</p>
-            <div class="growth">
-              <img src="" alt="" class="icon" />
-              <p class="percentage">1375%</p>
+          <div class="card">
+            <div class="topPart">
+              <h3 class="title">Profile Views</h3>
+              <img
+                src="./images/icon-instagram.svg"
+                alt=""
+                class="socialIcon"
+              />
+            </div>
+            <div class="bottomPart">
+              <p class="number">52k</p>
+              <div class="growth" raise>
+                <p class="percentage">1375%</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!------- TWITTER CARDS ------->
-        <div class="card">
-          <div class="topPart">
-            <h3 class="title">Retweets</h3>
-            <img src="" alt="" class="socialIcon" />
-          </div>
-          <div class="bottomPart">
-            <p class="number">117</p>
-            <div class="growth">
-              <img src="" alt="" class="icon" />
-              <p class="percentage">303%</p>
+          <!------- TWITTER CARDS ------->
+          <div class="card">
+            <div class="topPart">
+              <h3 class="title">Retweets</h3>
+              <img src="./images/icon-twitter.svg" alt="" class="socialIcon" />
+            </div>
+            <div class="bottomPart">
+              <p class="number">117</p>
+              <div class="growth" raise>
+                <p class="percentage">303%</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card">
-          <div class="topPart">
-            <h3 class="title">Likes</h3>
-            <img src="" alt="" class="socialIcon" />
-          </div>
-          <div class="bottomPart">
-            <p class="number">507</p>
-            <div class="growth">
-              <img src="" alt="" class="icon" />
-              <p class="percentage">553%</p>
+          <div class="card">
+            <div class="topPart">
+              <h3 class="title">Likes</h3>
+              <img src="./images/icon-twitter.svg" alt="" class="socialIcon" />
+            </div>
+            <div class="bottomPart">
+              <p class="number">507</p>
+              <div class="growth" raise>
+                <p class="percentage">553%</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!------- YOUTUBE CARDS ------->
-        <div class="card">
-          <div class="topPart">
-            <h3 class="title">Likes</h3>
-            <img src="" alt="" class="socialIcon" />
-          </div>
-          <div class="bottomPart">
-            <p class="number">107</p>
-            <div class="growth">
-              <img src="" alt="" class="icon" />
-              <p class="percentage">19%</p>
+          <!------- YOUTUBE CARDS ------->
+          <div class="card">
+            <div class="topPart">
+              <h3 class="title">Likes</h3>
+              <img src="./images/icon-youtube.svg" alt="" class="socialIcon" />
+            </div>
+            <div class="bottomPart">
+              <p class="number">107</p>
+              <div class="growth" drop>
+                <p class="percentage">19%</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="card">
-          <div class="topPart">
-            <h3 class="title">Total Views</h3>
-            <img src="" alt="" class="socialIcon" />
-          </div>
-          <div class="bottomPart">
-            <p class="number">1407</p>
-            <div class="growth">
-              <img src="" alt="" class="icon" />
-              <p class="percentage">12%</p>
+          <div class="card">
+            <div class="topPart">
+              <h3 class="title">Total Views</h3>
+              <img src="./images/icon-youtube.svg" alt="" class="socialIcon" />
+            </div>
+            <div class="bottomPart">
+              <p class="number">1407</p>
+              <div class="growth" drop>
+                <p class="percentage">12%</p>
+              </div>
             </div>
           </div>
         </div>
